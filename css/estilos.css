@@ -150,7 +150,7 @@ body {
     font-size: 35px;
     background: none;
     border: none;
-    color: #28B9B5;
+    color: #c96dc4;
     cursor: pointer;
     display: inline-block;
     vertical-align: middle;
@@ -188,7 +188,6 @@ body {
 h2 {
     text-transform: uppercase;
     font-size: 18px;
-    font-weight: 400;
     margin-bottom: 15px;
 }
 

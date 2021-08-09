@@ -145,5 +145,7 @@ const agregarDato = () => {
       cargarEgresos();
     }
   }
+  else {
+    window.alert('Por favor, complete los dos campos.');}
   document.forms['forma'].reset();
 };
