@@ -12,7 +12,7 @@
 
 body {
     color: #555;
-    font-family: montserrat;
+    font-family: helvetica;
     font-size: 16px;
     position: relative;
     height: 100vh;
@@ -50,7 +50,7 @@ body {
     font-size: 20px;
     text-align: center;
     margin-bottom: 10px;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .presupuesto_valor {
