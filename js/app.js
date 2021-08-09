@@ -3,7 +3,7 @@ const ingresos = [
   new Ingreso("Venta coche", 12000.0),
 ];
 
-const egresos = [new Egreso("Comida", 500.0), new Egreso("Ropa", 200.0)];
+const egresos = [new Egreso("Comida", 500.0), new Egreso("Bus", 200.0)];
 
 let cargarApp = () => {
   cargarCabecero();
@@ -73,7 +73,7 @@ const crearIngresoHTML = (ingreso) =>{
                   <div class="elemento_valor">+${formatoMoneda(ingreso.valor)}</div>
                   <div class="elemento_eliminar">
                     <button class='elemento_eliminar--btn'>
-                      <ion-icon name="close-circle-outline"></ion-icon>
+                      <ion-icon name="close-circle-outline" onclick='eliminarIngreso(${ingreso.id})'></ion-icon>
                     </button>
                   </div>
                 </div>
@@ -100,11 +100,26 @@ const crearEgresoHTML = (egreso) =>{
               <div class="elemento_porcentaje">${formatoPorcentaje(egreso.valor/totalEgresos())}</div>
               <div class="elemento_eliminar">
                 <button class="elemento_eliminar--btn">
-                  <ion-icon name="close-circle-outline"></ion-icon>
+                  <ion-icon name="close-circle-outline" onclick='eliminarEgreso(${egreso.id})'></ion-icon> 
                 </button>
               </div>
             </div>
           </div>
   `;
   return egresoHTML;
+}
+
+const eliminarIngreso = (id)=>{
+  // Método findIndex: compara cada objeto del arreglo con parámetro
+  let indiceEliminar = ingresos.findIndex(ingreso => ingreso.id === id); 
+  ingresos.splice(indiceEliminar, 1); // Elimina 1 elemento (índice recibido)
+  cargarCabecero();
+  cargarIngresos();
+}
+
+const eliminarEgreso = (id)=>{
+  let indiceEliminar = egresos.findIndex(egreso => egreso.id === id); 
+  egresos.splice(indiceEliminar, 1); // Elimina 1 elemento del arreglo Egresos (índice recibido)
+  cargarCabecero();
+  cargarEgresos();
 }

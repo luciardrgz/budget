@@ -44,6 +44,30 @@
       </div>
     </div>
 
+    <form id="forma">
+      <div class="agregar">
+        <div class="agregar_contenedor">
+          <select class="agregar_tipo" id="tipo">
+            <option value="ingreso" selected>+</option>
+            <!--Selected: opción por default-->
+            <option value="egreso">-</option>
+          </select>
+          <input
+            type="text"
+            class="agregar_descripcion"
+            placeholder="Agregar descripción"
+            id="descripcion"
+          />
+          <input
+            type="number"
+            class="agregar_valor"
+            placeholder="Valor"
+            id="valor"
+            step='any'
+          />
+        </div>
+      </div>
+    </form>
     <!--Sección Contenedor-->
     <div class="contenedor limpiarEstilos">
       <!--Sección caja "INGRESOS"-->
